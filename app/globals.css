@@ -1,26 +1,115 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+:root{
+  --bg-primary: #0f1f1a;       /* dark green-black (main) */
+  --bg-secondary: #18352d;     /* deep slate green */
+  --bg-tertiary: hsl(159, 42%, 32%);      /* soft mint */
+  --bg-transparent: #ffffff00;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --text-on-primary: #e8fdf5;   /* mint white */
+  --text-on-secondary: #c9f2e3; /* soft green */
+  --text-on-tertiary: #0f1f1a;  /* dark green */
+
+  --accent-green: #22c55e;   /* main accent */
+  --accent-green-soft: #86efac;
+
+  --btn-primary: linear-gradient(135deg, #22c55e, #16a34a);
+  --btn-secondary: #0f3d2e;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-on-primary);
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  scroll-padding-top: 10vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+.btn-primary {
+  background: var(--btn-primary);
+  color: #0a0a0a;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-secondary {
+  background: var(--btn-secondary);
+  color: var(--text-on-primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--accent-green);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(34, 197, 94, 0.25);
+}
+
+
+
+@keyframes heading-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-heading {
+  animation: heading-in 0.8s ease-out forwards;
+}
+
+
+
+@keyframes image-float-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-image {
+  animation: image-float-in 1s ease-out forwards;
+}
+
+
+
+@keyframes button-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-button {
+  animation: button-pop 0.6s ease-out forwards;
+}
+
+
+
+.hero-bg {
+  background-image: url("/hero-bg-2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
