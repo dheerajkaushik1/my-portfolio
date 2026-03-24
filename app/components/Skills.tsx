@@ -31,9 +31,9 @@ export default function Skills() {
           </div>
           <div className="h-full w-full bg-[var(--bg-primary)] z-10 absolute border-2 rounded-2xl rounded-tr-none flex justify-center p-6 sm:p-10 hover:shadow-[0_10px_30px_rgba(34,197,94,0.25)] transition-all duration-500">
             <ul className="list-disc flex flex-col gap-2 text-lg sm:text-2xl animate-b">
-              <li className="animate-b">Python</li>
-              <li className="animate-b">Django</li>
-              <li className="animate-b">PHP (Basics)</li>
+              <li className="animate-b">Node.js</li>
+              <li className="animate-b">Express.js</li>
+              <li className="animate-b">MongoDB</li>
               <li className="animate-b">SQL</li>
             </ul>
           </div>
@@ -46,6 +46,7 @@ export default function Skills() {
           <div className="h-full w-full bg-[var(--bg-primary)] z-10 absolute border-2 rounded-2xl rounded-tr-none p-6 sm:p-10 flex justify-center hover:shadow-[0_10px_30px_rgba(34,197,94,0.25)] transition-all duration-500">
             <ul className="list-disc flex flex-col gap-2 text-lg sm:text-2xl animate-b">
               <li className="animate-b">MySQL</li>
+              <li className="animate-b">MongoDB</li>
             </ul>
           </div>
         </div>
